@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+ <!-- Fig. 2.1: main.html -->
+<!-- First HTML5 example. -->
+<html>
+<head>
+<title>Najlepszy formularz</title>
+</head>
+<body>
+<h1>Skontaktuj się z nami!</h1>
+<p>Wypełnij formularz, a odezwiemy się do Ciebie.</p>
+
+<form method = "post" action = "http://www.deitel.com">
+
+<p><label><font color="grafit">E-mail:</font>
+               <input name = "name" type = "text" size = "33">
+            </label></p>
+
+<p><label>Telefon: 
+               <input type="text" name="name" pattern="[0-9]" size = "33" /> 
+            </label></p>
+
+<p><label>Miasto: 
+               <input name = "name" type = "text" size = "33">
+            </label></p>
+
+<p>
+            <label>Województwo: 
+
+               <select name = "rating">
+   		<option disabled selected value> -- wybierz województwo -- </option>
+                <option>dolnośląskie</option>
+                <option>kujawsko-pomorskie</option>
+                <option>lubuskie</option>
+                <option>lubelskie</option>
+                <option>łódzkie</option>
+                <option>małopolskie</option>
+                <option>mazowieckie</option>
+                <option>opolskie</option>
+                <option>podkarpackie</option>
+                <option>podlaskie</option>
+                <option>pomorskie</option>
+		<option>śląskie</option>
+		<option>świętokrzyskie</option>
+		<option>warmińsko-mazurskie</option>
+		<option>wielkopolskie</option>
+		<option>zachodniopomorskie</option>
+               </select>
+            </label>
+         </p>
+
+<!-- <textarea> creates a multiline textbox -->
+<p><label>Treść wiadomości:<br>
+<textarea name = "comments"
+rows = "5" cols = "40">Wpisz tutaj swoją wiadomość.</textarea>
+</label></p>
+<p>
+            <strong>Reprezentuję:</strong><br>
+
+            <label>Osoba prywatna:
+               <input name = "howtosite" type = "radio"
+                  value = "search engine" checked></label>
+            <label>Firma:
+               <input name = "howtosite" type = "radio" 
+                  value = "link"></label> 
+         </p>
+<p>
+            <strong>Zaznacz:</strong><br>
+
+            <label>Zapoznałem/-am się z klauzulą o przetwarzaniu danych osobowych:
+               <input name = "thingsliked" type = "checkbox" 
+                  value = "Design"></label>
+         </p>
+
+ <p>
+            <input type = "submit" value = "Wyślij">
+            <input type = "reset" value = "Wyczyść">
+         </p>
+ </form>
+</body>
+</html>
