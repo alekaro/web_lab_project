@@ -1,0 +1,49 @@
+#container {
+	width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#header {
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 15px;
+}
+#main_row {
+	background-color: white;
+	text-align: center;
+	padding: 15px;
+}
+#mr_left {
+	background-color: orange;
+	color: white;
+	text-align: center;
+	padding: 15px;
+}
+#mr_center {
+	background-color: white;
+	text-align: center;
+	padding: 15px;
+}
+#mr_right {
+	background-color: gray;
+	color: white;
+	text-align: center;
+	padding: 15px;
+}
+
+/* Nieodwiedzony link */
+a:link {
+	
+}
+
+/* Odwiedzony link */
+a:visited {
+	
+}
+
+/* Link po najechaniu kursorem*/
+a:hover {
+	
+}
+
