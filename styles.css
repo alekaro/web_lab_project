@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+html, body { font-family: 'Roboto', sans-serif; }
+
 #container {
 	width: 100%;
 	margin-left: auto;
@@ -9,40 +12,46 @@
 	text-align: center;
 	padding: 15px;
 }
-#main_row {
+#main-row {
 	background-color: white;
-	padding: 15px;
 	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
 	position: relative;
 }
-#mr_left {
+#mr-left {
 	background-color: orange;
 	color: white;
-	text-align: center;
-	padding: 15px;
-	width: 20%;
-	position: relative;
+	width: 15%;
 }
-#mr_center {
+#mr-center {
 	background-color: white;
-	text-align: center;
-	padding: 15px;
-	width: 65%;
-	position: relative;
+	padding: 2%;
+	width: 66%;
 }
-#mr_right {
+#mr-right {
 	background-color: gray;
 	color: white;
-	text-align: center;
-	padding: 15px;
 	width: 15%;
+}
+#footer {
+	background-color: blue;
+	color: white;
+	text-align: center;
 	position: relative;
 }
+#st {
+	position: fixed;
+}
 .xxx {
-	display: inline;
-	height: 50px;
+	height: auto;
+	position: relative;
 }
 
+a {
+	text-decoration: none;
+	color: #FFD0FF;
+}
 /* Nieodwiedzony link */
 a:link {
 	
