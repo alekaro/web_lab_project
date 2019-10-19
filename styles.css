@@ -1,5 +1,5 @@
 #container {
-	width: 1600px;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -11,25 +11,36 @@
 }
 #main_row {
 	background-color: white;
-	text-align: center;
 	padding: 15px;
+	width: 100%;
+	position: relative;
 }
 #mr_left {
 	background-color: orange;
 	color: white;
 	text-align: center;
 	padding: 15px;
+	width: 20%;
+	position: relative;
 }
 #mr_center {
 	background-color: white;
 	text-align: center;
 	padding: 15px;
+	width: 65%;
+	position: relative;
 }
 #mr_right {
 	background-color: gray;
 	color: white;
 	text-align: center;
 	padding: 15px;
+	width: 15%;
+	position: relative;
+}
+.xxx {
+	display: inline;
+	height: 50px;
 }
 
 /* Nieodwiedzony link */
