@@ -2,7 +2,7 @@
 <html lang="pl">
 	<head>
 		<meta charset="utf-8"/>
-		<title>Najlepszy formularz</title>
+		<title>Formularz kontaktowy</title>
 		<meta name="description" content="Największy katalog gitarowy na świecie. Mayones, Yamaha, Epiphone, Ibanez i wiele wiele innch." />
 		<meta name="keywords" content="gitara,gitary,yamaha,katalog,mayones" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -68,30 +68,43 @@
 
 								   <select name = "rating">
 							<option disabled selected value> -- wybierz województwo -- </option>
-									<option>dolnośląskie</option>
+									<optgroup label = "Region północny">
+									<option>pomorskie</option>
+									<option>warmińsko-mazurskie</option>
 									<option>kujawsko-pomorskie</option>
+									</optgroup>
+									<optgroup label = "Region północno-zachodni">
 									<option>lubuskie</option>
-									<option>lubelskie</option>
-									<option>łódzkie</option>
-									<option>małopolskie</option>
-									<option>mazowieckie</option>
+									<option>wielkopolskie</option>
+									<option>zachodniopomorskie</option>
+									</optgroup>
+									<optgroup label = "Region południowo-zachodni">
+									<option>dolnośląskie</option>
 									<option>opolskie</option>
+									</optgroup>
+									<optgroup label = "Region południowy">
+									<option>śląskie</option>
+									<option>małopolskie</option>
+									</optgroup>
+									<optgroup label = "Region centralny">
+									<option>mazowieckie</option>
+									<option>łódzkie</option>
+									</optgroup>
+									<optgroup label = "Region wschodni">
+									<option>lubelskie</option>f
 									<option>podkarpackie</option>
 									<option>podlaskie</option>
-									<option>pomorskie</option>
-							<option>śląskie</option>
-							<option>świętokrzyskie</option>
-							<option>warmińsko-mazurskie</option>
-							<option>wielkopolskie</option>
-							<option>zachodniopomorskie</option>
+									<option>świętokrzyskie</option>
+									</optgroup>
+							
+							
 								   </select>
 								</label>
 							 </p>
 
-					<!-- <textarea> creates a multiline textbox -->
 					<p><label>Treść wiadomości:<br>
 					<textarea name = "comments"
-					rows = "5" cols = "40">Wpisz tutaj swoją wiadomość.</textarea>
+					rows = "5" cols = "40" maxlength=200>Wpisz tutaj swoją wiadomość.</textarea>
 					</label></p>
 					<p>
 								<strong>Reprezentuję:</strong><br>
