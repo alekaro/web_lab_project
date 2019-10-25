@@ -1,8 +1,8 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html lang="pl">
 	<head>
 		<meta charset="utf-8"/>
-		<title>Katalog gitar</title>
+		<title>Formularz kontaktowy</title>
 		<meta name="description" content="Największy katalog gitarowy na świecie. Mayones, Yamaha, Epiphone, Ibanez i wiele wiele innch." />
 		<meta name="keywords" content="gitara,gitary,yamaha,katalog,mayones" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -21,7 +21,7 @@
 							<a href="index.html"><img height="100" width="100" src="./img/logo.png" alt="Powrót do strony głównej"/></a>
 						</td>
 						<td class="d2">
-							<center><h1>Gitary elektryczne</h1></center>
+							<center><h1>Zapisz się do naszego Newsletter'a!</h1></center>
 						<td class="d3">
 						</td>
 					</tr>
@@ -58,61 +58,49 @@
 					</ol>
 				</div>
 				<div id="mr-center" class="xxx" >
-					
-					<a href="https://www.google.com/search?q=MAYONES+Regius+PRO+6+T-BLK-G&oq=MAYONES+Regius+PRO+6+T-BLK-G&aqs=chrome..69i57j69i60j69i61.652j0j7&sourceid=chrome&ie=UTF-8" title="Wyszukaj w google"><img width="600" height="200" src="img/e-mayones.jpg"  alt="ups! nie wczytano gitary"/></a><br/>
-					<h2>MAYONES Regius PRO 6 T-BLK-G</h2>
-
+					<form method="post" action= "thanks.html" autocomplete="on">
 					<table>
-						<thead>
-							<tr>
-								<th colspan="2">
-									Dane techniczne:
-								</th>
-							</tr>
-						</thead>
-						<tbody style="background-color: red">
-							<tr>
-								<td>ilość strun:</td><td>6</td>
-							</tr>
-						</tbody>
-						<tbody style="background-color: orange">
-							<tr>
-								<td>marka:</td><td>MAYONES</td>
-							</tr>
-						</tbody>
-						<tbody style="background-color: yellow">
-							<tr>
-								<td>rok wydania:</td><td><table>
-																						<tr>
-																							<td>1998</td><td>12</td><td>01</td>
-																						</tr>
-																					</table></td>
-							</tr>
-						</tbody>
+						<tr>
+							<td><label for="name">Imię:</label></td><td><input id="name" name="name" type="text" size="33" autofocus></td><td>np. Marian</td>
+						</tr>
+							<td><label for="lastname"><sup>*</sup>Nazwisko: </label></td><td><input name="surname" id="lastname" type="text" size="33" required></td><td>np. Kowalski</td>
+						</tr>
+						<tr>
+							<td><label for="bmonth">Miesiąc: </label></td><td><input list="months" name="month" size = "33" />
+								<datalist id="months">
+									<option value="Styczeń">
+									<option value="Luty">
+									<option value="Marzec">
+									<option value="Kwiecień">
+									<option value="Maj">
+									<option value="Czerwiec">
+									<option value="Lipiec">
+									<option value="Sierpień">
+									<option value="Wrzesień">
+									<option value="Październik">
+									<option value="Listopad">
+									<option value="Grudzień"></td>
+						</tr>
+						<tr>
+							<td><label for="email"><sup>*</sup>Adres email: </label></td><td><input id="email" type="email" name="email" size = "33" required/></td><td>np. przykladowyadres@domena.com</td>
+						</tr>
+						<tr>
+							<td><label for="pnumber">Telefon: </label></td><td><input id="pnumber" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" size = "33" /></td><td>np. 123-456-789</td>
+						</tr>
 					</table>
-
-					<h3>Inne gitary:</h3>
-
-					<h4>basowa akustyczna</h4>
-						<p>
-							Określenie gitara basowa najczęściej jest używane w odniesieniu do elektrycznej wersji tego instrumentu.
-						</p>
-					<h4>gitara wielogryfowa</h4>
-						<p>
-							Jest to szersza wersja gitary elektrycznej posiadająca więcej niż jeden gryf (najczęściej dwa).
-						</p>
-					<a href="http://muzyczny.pl/towary/110576.jpg" download>Pobierz zdjęcie gitary</a>
+					<input type="submit" value = "Wyślij">
+					<input type="reset" value = "Wyczyść">
+					 </form>
+					
 				</div>
 				<div id="mr-right" class="xxx" >
 					
 				</div>
 			</div>
-			
 			<footer>
 				&copy; Copyright. All right reserved
 				<br/>
 				<a href="mailto:kataloggitarowy@katag.com">Skontaktuj się z nami mailowo</a>
-				lub wypełnij <a href="formularz.html">formularz</a>
 			</footer>
 		
 		</div>
