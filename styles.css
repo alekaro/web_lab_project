@@ -182,6 +182,18 @@ article {
     clear: both;
 }
 
+a [href="newsletter.html"] {
+    background-color: white;
+}
+
+p [id="submit-p"],
+p [id="reset-p"] {
+    font-variant: small-caps;
+    font-size: 13pt;
+    font-weight: 700;
+    display: inline;
+}
+
 
 /* Nieodwiedzony link */
 
