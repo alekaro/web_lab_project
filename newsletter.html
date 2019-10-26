@@ -1,73 +1,81 @@
 <!DOCTYPE HTML>
 <html lang="pl">
-	<head>
-		<meta charset="utf-8"/>
-		<title>Formularz kontaktowy</title>
-		<meta name="description" content="Największy katalog gitarowy na świecie. Mayones, Yamaha, Epiphone, Ibanez i wiele wiele innch." />
-		<meta name="keywords" content="gitara,gitary,yamaha,katalog,mayones" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		
-		<link rel="stylesheet" href="styles.css" type="text/css" />
-		
-	</head>
-	
-	<body>
-		
-		<div id="container">
-			<div id="header">
-				<table class="t1">
-					<tr>
-						<td class="d1">
-							<a href="index.html"><img height="100" width="100" src="./img/logo.png" alt="Powrót do strony głównej"/></a>
-						</td>
-						<td class="d2">
-							<center><h1>Zapisz się do naszego Newsletter'a!</h1></center>
-						<td class="d3">
-						</td>
-					</tr>
-				</table>
-			</div>
-			<div id="main-row">
-				<div id="mr-left" class="xxx" >
-					<h2>Kategorie</h2>
-					<ol>
-						<li><strong>Elektryczne </strong><br/>
-							<ul>
-								<li><a href="e-mayones.html">Mayones</a></li>
-								<li><a href="e-ibanez.html">Ibanez</a></li>
-							</ul>
-						</li>
-						<li><strong>Basowe</strong><br/>
-							<ul>
-								<li><a href="b-mayones.html">Mayones</a></li>
-								<li>Epiphone</li>
-								<li>Ibanez</li>
-							</ul>
-						</li>
-						<li><strong>Akustyczne</strong><br/>
-							<ul>
-								<li>Ibanez</li>
-								<li>Yamaha</li>
-							</ul>
-						</li>
-						<li><strong>Klasyczne</strong><br/>
-							<ul>
-								<li>Yamaha</li>
-							</ul>
-						</li>
-					</ol>
-				</div>
-				<div id="mr-center" class="xxx" >
-					<form method="post" action= "thanks.html" autocomplete="on">
-					<table>
-						<tr>
-							<td><label for="name">Imię:</label></td><td><input id="name" name="name" type="text" size="33" autofocus></td><td>np. Marian</td>
-						</tr>
-							<td><label for="lastname"><sup>*</sup>Nazwisko: </label></td><td><input name="surname" id="lastname" type="text" size="33" required></td><td>np. Kowalski</td>
-						</tr>
-						<tr>
-							<td><label for="bmonth">Miesiąc: </label></td><td><input list="months" name="month" size = "33" />
-								<datalist id="months">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Formularz kontaktowy</title>
+    <meta name="description" content="Największy katalog gitarowy na świecie. Mayones, Yamaha, Epiphone, Ibanez i wiele wiele innch." />
+    <meta name="keywords" content="gitara,gitary,yamaha,katalog,mayones" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="header">
+            <table class="t1">
+                <tr>
+                    <td class="d1">
+                        <a href="index.html"><img height="100" width="100" src="./img/logo.png" alt="Powrót do strony głównej" /></a>
+                    </td>
+                    <td class="d2">
+                        <center>
+                            <h1>Zapisz się do naszego Newsletter'a!</h1>
+                        </center>
+                        <td class="d3">
+                        </td>
+                </tr>
+            </table>
+        </div>
+        <div id="main-row">
+            <div id="mr-left" class="xxx">
+                <h2>Kategorie</h2>
+                <ol>
+                    <li><strong>Elektryczne </strong><br/>
+                        <ul>
+                            <li><a href="e-mayones.html">Mayones</a></li>
+                            <li><a href="e-ibanez.html">Ibanez</a></li>
+                        </ul>
+                    </li>
+                    <li><strong>Basowe</strong><br/>
+                        <ul>
+                            <li><a href="b-mayones.html">Mayones</a></li>
+                            <li>Epiphone</li>
+                            <li>Ibanez</li>
+                        </ul>
+                    </li>
+                    <li><strong>Akustyczne</strong><br/>
+                        <ul>
+                            <li>Ibanez</li>
+                            <li>Yamaha</li>
+                        </ul>
+                    </li>
+                    <li><strong>Klasyczne</strong><br/>
+                        <ul>
+                            <li>Yamaha</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            <div id="mr-center" class="xxx">
+                <form method="post" action="thanks.html" autocomplete="on">
+                    <table>
+                        <tr>
+                            <td><label for="name">Imię:</label></td>
+                            <td><input id="name" name="name" type="text" size="33" autofocus></td>
+                            <td>np. Marian</td>
+                        </tr>
+                        <td><label for="lastname"><sup>*</sup>Nazwisko: </label></td>
+                        <td><input name="surname" id="lastname" type="text" size="33" required></td>
+                        <td>np. Kowalski</td>
+                        </tr>
+                        <tr>
+                            <td><label for="bmonth">Miesiąc: </label></td>
+                            <td><input list="months" name="month" size="33" />
+                                <datalist id="months">
 									<option value="Styczeń">
 									<option value="Luty">
 									<option value="Marzec">
@@ -98,10 +106,22 @@
 				</div>
 			</div>
 			<footer>
-				&copy; Copyright. All right reserved
-				<br/>
-				<a href="mailto:kataloggitarowy@katag.com">Skontaktuj się z nami mailowo</a>
-			</footer>
+					<table class="t1">
+						<tr>
+							<td class="d1">
+							</td>
+							<td class="d2">
+								&copy; Copyright. All right reserved
+								<td rowspan="2" class="d3"></td>
+						</tr>
+						<tr>
+							<td class="d1">
+							</td>
+							<td class="d2">
+								<a href="mailto:kataloggitarowy@katag.com">Skontaktuj się z nami mailowo</a> lub wypełnij <a href="formularz.html">formularz</a>
+						</tr>
+					</table>
+				</footer>
 		
 		</div>
 	
