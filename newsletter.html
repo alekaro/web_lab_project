@@ -73,22 +73,34 @@
                         <td>np. Kowalski</td>
                         </tr>
                         <tr>
-                            <td><label for="bmonth">Miesiąc: </label></td>
-                            <td><input list="months" name="month" size="33" />
-                                <datalist id="months">
-									<option value="Styczeń">
-									<option value="Luty">
-									<option value="Marzec">
-									<option value="Kwiecień">
-									<option value="Maj">
-									<option value="Czerwiec">
-									<option value="Lipiec">
-									<option value="Sierpień">
-									<option value="Wrzesień">
-									<option value="Październik">
-									<option value="Listopad">
-									<option value="Grudzień"></td>
+                            <td><label for="start">Miesiąc urodzenia:</label></td>
+                            <td><input type="month" id="start" name="start">
+                          
 						</tr>
+
+		<tr>
+			<td><p>Jak podoba Ci się nasza strona?:</p></td>
+			<td> <input type="range" id="start" name="volume"
+         min="0" max="11"> </td>
+		
+			</tr>	
+<tr>
+<td><label for="url">Podziel się adresem swojego bloga:</label></td>
+
+<td><input type="url" name="url" id="url"
+       placeholder="https://blogspot.pl"
+       pattern="https://.*" size="30"></td>
+</tr>
+
+<tr>
+<td><p>Wybierz motyw kolorystyczny swojego newslettera:</p></td>
+    <td><input type="color" id="head" name="head" value="#e66465"></td>
+ </tr>
+ 
+ <tr>
+<td><p>Wyszukaj(poczytać o co chodzi XD): </p></td>
+<td><input type="search" name="q"></td>
+</tr>
 						<tr>
 							<td><label for="email"><sup>*</sup>Adres email: </label></td><td><input id="email" type="email" name="email" size = "33" required/></td><td>np. przykladowyadres@domena.com</td>
 						</tr>
