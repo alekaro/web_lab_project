@@ -66,21 +66,19 @@
                         <tr>
                             <td><label for="name">Imię:</label></td>
                             <td><input id="name" name="name" type="text" size="33" autofocus></td>
-                            <td>np. Marian</td>
                         </tr>
+						<tr>
                         <td><label for="lastname"><sup>*</sup>Nazwisko: </label></td>
                         <td><input name="surname" id="lastname" type="text" size="33" required></td>
-                        <td>np. Kowalski</td>
                         </tr>
                         <tr>
                             <td><label for="start">Miesiąc urodzenia:</label></td>
                             <td><input type="month" id="start" name="start">
-                          
-						</tr>
+                          </tr>
 
 		<tr>
 			<td><p>Jak podoba Ci się nasza strona?:</p></td>
-			<td> <input type="range" id="start" name="volume"
+			<td> <input type="range" id="like" name="weblike"
          min="0" max="11"> </td>
 		
 			</tr>	
@@ -102,10 +100,13 @@
 <td><input type="search" name="q"></td>
 </tr>
 						<tr>
-							<td><label for="email"><sup>*</sup>Adres email: </label></td><td><input id="email" type="email" name="email" size = "33" required/></td><td>np. przykladowyadres@domena.com</td>
+							<td><label for="email"><sup>*</sup>Adres email: </label></td>
+							<td><input id="email" type="email" name="email" size = "33" required/></td>
+
 						</tr>
 						<tr>
-							<td><label for="pnumber">Telefon: </label></td><td><input id="pnumber" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" size = "33" /></td><td>np. 123-456-789</td>
+							<td><label for="pnumber">Telefon: </label></td>
+							<td><input id="pnumber" type="tel" name="phone" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" size = "33" title="Podaj numer w formacie 123 456 789" />
 						</tr>
 					</table>
 					<input type="submit" value = "Wyślij">
