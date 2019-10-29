@@ -111,6 +111,7 @@ h1 {
     /* font-size: 120%; */
 }
 
+.center {text-align: center;}
 
 .xxx {
     height: auto;
@@ -267,7 +268,7 @@ color:#F3E2A9
 
 .newstab tbody tr:last-child td {color:green}
 
-.tab3 p:last-of-type {color:red; font-style: italic;}
+.listanews li:last-of-type {font-style: italic;}
 
 /* Nieodwiedzony link */
 a:link {
@@ -294,7 +295,7 @@ color:brown
 }
 
 /*Koloruje tekst, do którego się przemieściliśmy dzięki etykietom*/
-div:target { color: purple }
+p:target { color: purple }
 
 .listanews li:nth-of-type(odd) {color: purple}
 
