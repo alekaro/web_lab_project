@@ -60,7 +60,7 @@
                     </li>
                 </ol>
             </div>
-            <div id="mr-center" class="form2">
+            <div id="mr-center" class="xxx">
 			
 			<p>Dzięki naszemu katalogowi: </p>
 			<ul class=listanews>
@@ -77,47 +77,54 @@
                         <tr>
                             <td><label for="name">Imię:</label></td>
                             <td><input id="name" name="name" type="text" size="33" autofocus></td>
+							<td><p>np. Marian</p></td>
                         </tr>
 						<tr>
                         <td><label for="lastname"><sup>*</sup>Nazwisko: </label></td>
                         <td><input name="surname" id="lastname" type="text" size="33" required></td>
+						<td><p>np. Kowalski</p></td>
                         </tr>
                         <tr>
                             <td><label for="start">Miesiąc urodzenia:</label></td>
                             <td><input type="month" id="start" name="start">
+							<td><p>Wybierz z listy swój miesiąc urodzenia</p></td>
                           </tr>
 
 		<tr>
 			<td><p>Jak podoba Ci się nasza strona?:</p></td>
 			<td> <input type="range" id="like" name="weblike"
-         min="0" max="11"> </td>
-		
+         min="0" max="10"> </td>
+			<td><p>Użyj suwaka, im bardziej w prawo tym lepsza jest według Ciebie nasza strona :)</p></td>
 			</tr>	
 <tr>
-<td><label for="url">Podziel się adresem swojego bloga:</label></td>
+<td><label for="url">Podziel się adresem swojego bloga jeżeli go posiadasz:</label></td>
 
 <td><input type="url" name="url" id="url"
        placeholder="https://blogspot.pl"
        pattern="https://.*" size="30"></td>
+	   <td><p>np. https://guitarway.pl/</p></td>
 </tr>
 
 <tr>
 <td><p>Wybierz motyw kolorystyczny swojego newslettera:</p></td>
     <td><input type="color" id="head" name="head" value="#e66465"></td>
+	<td></td>
  </tr>
  
  <tr>
-<td><p>Wyszukaj(poczytać o co chodzi XD): </p></td>
+<td><p>Wyszukaj: </p></td>
 <td><input type="search" name="q" disabled></td>
+<td></td>
 </tr>
 						<tr>
 							<td><label for="email"><sup>*</sup>Adres email: </label></td>
 							<td><input id="email" type="email" name="email" size = "33" required/></td>
-
+							<td>np. paulinajaworska42@gmail.com</td>
 						</tr>
 						<tr>
 							<td><label for="pnumber">Telefon: </label></td>
 							<td><input id="pnumber" type="tel" name="phone" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" size = "33" title="Podaj numer w formacie 123 456 789" />
+							<td>np. 736 796 808</td>
 						</tr>
 					</table>
 					<p>

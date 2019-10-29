@@ -30,11 +30,13 @@ body {
     width: 14.5%;
     padding-left: 0.5%;
 }
+
 #img {
   position: absolute;
   left: 0px;
   top: 0px;
 }
+
 #mr-center {
     background-image: url("img/pick.png");
     background-repeat: repeat;
@@ -43,14 +45,15 @@ body {
     width: 68%;
 }
 
+  
 #mr-center-form {
     background: url("img/background-kerry.jpg") no-repeat center center;
     background-size: cover;
     color: white;
     padding: 2%;
     width: 66%;
-	
 }
+
 
 #mr-right {
     background-color: gray;
@@ -61,7 +64,7 @@ body {
 
 #st {
     position: fixed;
-	bottom: 10
+	bottom: 10px
 }
 
 #newsletter {
@@ -194,6 +197,18 @@ article {
 #ending {
     clear: both;
 }
+
+/*media*/
+@media only screen and (max-width: 1200px) {
+	#mr-left {display: none;}
+	#mr-right {display: none;}
+}
+
+@media print {
+	#mr-left {display: none;}
+	#mr-right {display: none;}
+  }
+  
 /*po atrybutach*/
 
 button[type="submit"] 
@@ -224,6 +239,12 @@ p:empty {
   background: #ff0000;
 }
 
+@page :first {
+  margin-left: 50%;
+  margin-top: 50%;
+/*margin: 5cm;*/
+}
+
 .newstab tbody tr:first-child td {color: red}
 
 /*okienko, w które coś wpisujesz w formularzu*/
@@ -250,7 +271,7 @@ color:purple
 
 
 .zebra tbody tr:nth-last-child(odd) td { color: white; background-color: gray }
-.zebra tbody tr:nth-last-child(even) td { color: gray; background-color: white }
+.zebra tbody tr:not(:nth-last-child(odd)) td { color: gray; background-color: white }
 
 .newstab1 tbody tr:only-child td {color:purple}
 
