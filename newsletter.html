@@ -19,7 +19,7 @@
             <table class="t1">
                 <tr>
                     <td class="d1">
-                        <a href="index.html"><img height="100" width="100" src="./img/logo.png" alt="Powrót do strony głównej" /></a>
+                        <a href="index.html"><img height="100" width="100" id='img' src="./img/logo.png" alt="Powrót do strony głównej" /></a>
                     </td>
                     <td class="d2">
                         <center>
@@ -60,7 +60,18 @@
                     </li>
                 </ol>
             </div>
-            <div id="mr-center" class="xxx">
+            <div id="mr-center" class="form2">
+			
+			<p>Dzięki naszemu katalogowi: </p>
+			<ul class=listanews>
+  <li>poznasz bogactwo i historię jednego z najpopularniejszych instrumentów na świcie</li>
+  <li>dowiesz się, kto był wirtuozem poszczególnych modeli</li>
+  <li>odnajdziesz ich brzmienie na wskazanych płytach</li>
+  <li>dowiesz się z czego są zrobione</li>
+  <li>i wiele innych rzeczy</li>
+</ul>
+
+<p></p>
                 <form method="post" action="thanks.html" autocomplete="on">
                     <table>
                         <tr>
@@ -97,7 +108,7 @@
  
  <tr>
 <td><p>Wyszukaj(poczytać o co chodzi XD): </p></td>
-<td><input type="search" name="q"></td>
+<td><input type="search" name="q" disabled></td>
 </tr>
 						<tr>
 							<td><label for="email"><sup>*</sup>Adres email: </label></td>
@@ -109,8 +120,16 @@
 							<td><input id="pnumber" type="tel" name="phone" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" size = "33" title="Podaj numer w formacie 123 456 789" />
 						</tr>
 					</table>
-					<input type="submit" value = "Wyślij">
-					<input type="reset" value = "Wyczyść">
+					<p>
+                        <button type="submit">
+							<!--<p id="submit-p">Wyślij</p>-->
+							Wyślij
+						</button>
+                        <button type="reset">
+								<!--<p id="reset-p">Wyczyść</p>-->
+							Wyczyść
+						</button>
+                    </p>
 					 </form>
 					
 				</div>

@@ -30,7 +30,11 @@ body {
     width: 14.5%;
     padding-left: 0.5%;
 }
-
+#img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
 #mr-center {
     background-image: url("img/pick.png");
     background-repeat: repeat;
@@ -45,6 +49,7 @@ body {
     color: white;
     padding: 2%;
     width: 66%;
+	
 }
 
 #mr-right {
@@ -56,10 +61,12 @@ body {
 
 #st {
     position: fixed;
+	bottom: 10
 }
 
 #newsletter {
     vertical-align: middle;
+	position: static
 }
 
 #thanks {
@@ -101,7 +108,13 @@ h1 {
     /* font-size: 120%; */
 }
 
+
 .xxx {
+    height: auto;
+    position: relative;
+}
+
+.form2 {
     height: auto;
     position: relative;
 }
@@ -181,10 +194,90 @@ article {
 #ending {
     clear: both;
 }
+/*po atrybutach*/
+
+button[type="submit"] 
+{ border: 4px solid red }
+
+button[type="reset"] 
+{ border: 4px solid green }
+
+/* Link po przytrztmaniu kursora*/
+a:active { 
+color: white }
+
+/*Label po zaznaczeniu checkboxa*/
+input[type=checkbox]:checked + label {
+  color: grey;
+  font-style: normal;
+}
+/*pola, w które nie można nic wpisać*/
+input:disabled { border: 1px solid red }
+
+/*pola, w które można coś wpisać*/
+input:enabled { border: 1px solid black }
+
+/* puste p*/
+p:empty {
+  width: 100px;
+  height: 20px;
+  background: #ff0000;
+}
+
+.newstab tbody tr:first-child td {color: red}
+
+/*okienko, w które coś wpisujesz w formularzu*/
+input:focus {
+  background: red;
+}
+
+/* Link po najechaniu kursorem*/
+
+a:hover {
+color:#F3E2A9
+}
+
+.newstab tbody tr:last-child td {color:green}
+
+.tab3 p:last-of-type {color:red; font-style: italic;}
+
+/* Nieodwiedzony link */
+a:link {
+color:purple
+}
+
+.zebra tbody tr:nth-child(2) { font-style: italic }
+
+
+.zebra tbody tr:nth-last-child(odd) td { color: white; background-color: gray }
+.zebra tbody tr:nth-last-child(even) td { color: gray; background-color: white }
+
+.newstab1 tbody tr:only-child td {color:purple}
+
+/* Pola wymagane */
+input:required {
+  background: navy;
+}
+
+/* Odwiedzony link */
+
+a:visited {
+color:brown
+}
+
+/*Koloruje tekst, do którego się przemieściliśmy dzięki etykietom*/
+div:target { color: purple }
+
+.listanews li:nth-of-type(odd) {color: purple}
+
+
+
+
 
 a [href="newsletter.html"] {
     background-color: white;
 }
+
 
 p [id="submit-p"],
 p [id="reset-p"] {
@@ -194,17 +287,8 @@ p [id="reset-p"] {
     display: inline;
 }
 
-
-/* Nieodwiedzony link */
-
-a:link {}
+p:lang(en) { color: purple }
 
 
-/* Odwiedzony link */
-
-a:visited {}
 
 
-/* Link po najechaniu kursorem*/
-
-a:hover {}
