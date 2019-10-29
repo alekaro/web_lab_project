@@ -232,7 +232,9 @@ input[type=checkbox]:checked + label {
   font-style: normal;
 }
 /*pola, w które nie można nic wpisać*/
-input:disabled { border: 1px solid red }
+input:disabled { border-style:dashed; 
+				border-width:2px;
+				border-color:red;}
 
 /*pola, w które można coś wpisać*/
 input:enabled { border: 1px solid black }
