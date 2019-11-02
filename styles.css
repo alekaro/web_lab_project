@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@font-face {
+    src: url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+    font-family: 'Roboto';
+}
+
 html,
 body {
     font-family: 'Roboto', sans-serif;
@@ -25,16 +29,16 @@ body {
 }
 
 #mr-left {
-    background-color: orange;
+    background: linear-gradient(to right, orange, rgb(255, 214, 32));
     color: white;
     width: 14.5%;
     padding-left: 0.5%;
 }
 
 #img {
-  position: absolute;
-  left: 0px;
-  top: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
 }
 
 #mr-center {
@@ -45,18 +49,20 @@ body {
     width: 68%;
 }
 
-  
 #mr-center-form {
     background: url("img/background-kerry.jpg") no-repeat center center;
+    border: 0px solid transparent;
+    border-image-source: url("img/border.png");
+    border-image-slice: 30%;
+    background-origin: border-box;
     background-size: cover;
     color: white;
     padding: 2%;
     width: 66%;
 }
 
-
 #mr-right {
-    background-color: gray;
+    background: radial-gradient(hsl(0, 0%, 40%), hsl(0, 0%, 61%));
     color: white;
     width: 14.5%;
     padding-left: 0.5%;
@@ -64,12 +70,12 @@ body {
 
 #st {
     position: fixed;
-	bottom: 10px
+    bottom: 10px
 }
 
 #newsletter {
     vertical-align: middle;
-	position: static
+    position: static
 }
 
 #thanks {
@@ -111,13 +117,34 @@ h1 {
     /* font-size: 120%; */
 }
 
-.center {text-align: center;}
+.logo:hover {
+    animation: spin 0.5s ease-in-out 1;
+}
+
+@keyframes spin {
+    0% {
+        transform: translateY(-15px);
+    }
+    25% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: rotate(0deg) skew(-20deg)
+    }
+    100% {
+        transform: rotate(360deg) skew(0deg)
+    }
+}
+
+.center {
+    text-align: center;
+    text-shadow: 3px 3px hsla(0, 0%, 100%, 0.603);
+}
 
 .xxx {
     height: auto;
     position: relative;
 }
-
 
 .t1 {
     width: 100%
@@ -173,17 +200,31 @@ a {
     color: #ede2ff;
 }
 
+li {
+    transition: all 0.2s linear;
+}
+
+li:hover {
+    transform: scale(1.1);
+}
+
 article {
     background: #a5a5a557;
+    border: 2px solid rgba(70, 70, 70, 0.795);
+    border-radius: 20px;
+    padding: 5px;
+    -webkit-box-shadow: 10px 10px 7px -1px rgba(79, 79, 79, 0.4);
+    -moz-box-shadow: 10px 10px 7px -1px rgba(79, 79, 79, 0.4);
+    box-shadow: 10px 10px 7px -1px rgba(79, 79, 79, 0.4);
 }
 
 #facebook {
-	position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 200px;
-  height: 100px;
-  border: 3px solid blue;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 200px;
+    height: 100px;
+    border: 3px solid blue;
 }
 
 #main-section {
@@ -204,109 +245,159 @@ article {
     clear: both;
 }
 
+
 /*media*/
+
 @media only screen and (max-width: 1200px) {
-	#mr-left {display: none;}
-	#mr-right {display: none;}
+    #mr-left {
+        display: none;
+    }
+    #mr-right {
+        display: none;
+    }
 }
 
 @media print {
-	#mr-left {display: none;}
-	#mr-right {display: none;}
-  }
-  
+    #mr-left {
+        display: none;
+    }
+    #mr-right {
+        display: none;
+    }
+}
+
+
 /*po atrybutach*/
 
-button[type="submit"] 
-{ border: 4px solid red }
+button[type="submit"] {
+    border: 4px solid red
+}
 
-button[type="reset"] 
-{ border: 4px solid green }
+button[type="reset"] {
+    border: 4px solid green
+}
+
 
 /* Link po przytrztmaniu kursora*/
-a:active { 
-color: white }
+
+a:active {
+    color: white
+}
+
 
 /*Label po zaznaczeniu checkboxa*/
-input[type=checkbox]:checked + label {
-  color: grey;
-  font-style: normal;
+
+input[type=checkbox]:checked+label {
+    color: grey;
+    font-style: normal;
 }
+
+
 /*pola, w które nie można nic wpisać*/
-input:disabled { border-style:dashed; 
-				border-width:2px;
-				border-color:red;}
+
+input:disabled {
+    border-style: dashed;
+    border-width: 2px;
+    border-color: red;
+}
+
 
 /*pola, w które można coś wpisać*/
-input:enabled { border: 1px solid black }
+
+input:enabled {
+    border: 1px solid black
+}
+
 
 /* puste p*/
+
 p:empty {
-  width: 100px;
-  height: 20px;
-  background: #ff0000;
+    width: 100px;
+    height: 20px;
+    background: #ff0000;
 }
 
 @page :first {
-  margin-left: 50%;
-  margin-top: 50%;
-/*margin: 5cm;*/
+    margin-left: 50%;
+    margin-top: 50%;
+    /*margin: 5cm;*/
 }
 
-.newstab tbody tr:first-child td {color: red}
+.newstab tbody tr:first-child td {
+    color: red
+}
+
 
 /*okienko, w które coś wpisujesz w formularzu*/
+
 input:focus {
-  background: red;
+    background: #cecece;
 }
+
 
 /* Link po najechaniu kursorem*/
 
-a:hover {
-color:#F3E2A9
+.newstab tbody tr:last-child td {
+    color: green
 }
 
-.newstab tbody tr:last-child td {color:green}
+.listanews li:last-of-type {
+    font-style: italic;
+}
 
-.listanews li:last-of-type {font-style: italic;}
 
 /* Nieodwiedzony link */
+
 a:link {
-color:purple
+    color: purple
 }
 
-.zebra tbody tr:nth-child(2) { font-style: italic }
+.zebra tbody tr:nth-child(2) {
+    font-style: italic
+}
 
+.zebra tbody tr:nth-last-child(odd) td {
+    color: white;
+    background-color: gray
+}
 
-.zebra tbody tr:nth-last-child(odd) td { color: white; background-color: gray }
-.zebra tbody tr:not(:nth-last-child(odd)) td { color: gray; background-color: white }
+.zebra tbody tr:not(:nth-last-child(odd)) td {
+    color: gray;
+    background-color: white
+}
 
-.newstab1 tbody tr:only-child td {color:purple}
+.newstab1 tbody tr:only-child td {
+    color: purple
+}
+
 
 /* Pola wymagane */
+
 input:required {
-  background: navy;
+    background: #ffe0e0;
 }
+
 
 /* Odwiedzony link */
 
 a:visited {
-color:brown
+    color: brown
 }
 
+
 /*Koloruje tekst, do którego się przemieściliśmy dzięki etykietom*/
-p:target { color: purple }
 
-.listanews li:nth-of-type(odd) {color: purple}
+p:target {
+    color: purple
+}
 
-
-
-
+.listanews li:nth-of-type(odd) {
+    color: purple
+}
 
 a [href="newsletter.html"] {
     background-color: white;
 }
-
 
 p [id="submit-p"],
 p [id="reset-p"] {
@@ -316,8 +407,6 @@ p [id="reset-p"] {
     display: inline;
 }
 
-p:lang(en) { color: purple }
-
-
-
-
+p:lang(en) {
+    color: purple
+}
