@@ -49,6 +49,14 @@ body {
     width: 68%;
 }
 
+#borderimg { 
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image-source: url(img/border.png);  
+  border-image-slice: 30;
+  border-image-repeat: round;
+}
+
 #mr-center-form {
     background: url("img/background-kerry.jpg") no-repeat center center;
     border: 0px solid transparent;
@@ -450,3 +458,55 @@ p [id="reset-p"] {
 p:lang(en) {
     color: purple
 }
+
+/* .flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+
+.flex-item {
+  flex-grow: 1;
+  height: 150px;
+  background-color: orange;
+  position: relative;
+  border: 1px solid lighten(black, 10);
+  transition: all 300ms ease-in-out;}
+  
+   .flex-item:hover {
+    flex-grow: 4.3;
+    background-color: purple;
+  }  */
+  
+  .flex-container {
+  width: 100%;
+  height: 300px;
+  /* create the flex container */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.flex {
+  flex: 1;
+  border: 2px solid black;
+background-color:orange;
+}
+.hover:hover {
+  flex: 4;
+  background-color: purple;
+}
+
+
+
