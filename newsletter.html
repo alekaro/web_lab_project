@@ -10,6 +10,37 @@
 
     <link rel="stylesheet" href="styles.css" type="text/css" />
 
+    <script type="text/javascript">
+        var opinions = new Array(5);
+        opinions[0] = "W ogóle nie podoba";
+        opinions[1] = "Nie podoba";
+        opinions[2] = "Obojętna";
+        opinions[3] = "Podoba";
+        opinions[4] = "Bardzo podoba";
+
+        function setOpinion() {
+            var lvl = document.getElementById("like").value;
+            document.getElementById("opinion-level").innerHTML = opinions[lvl];
+        }
+
+        function onSubmitForm() {
+            var response = window.prompt("Are you sure? [type \"yes\" if so]", "");
+            response = response.toUpperCase();
+            switch (response) {
+                case "YES":
+                    window.alert("Form has been sent");
+                    newsForm.submit();
+                    break;
+                case "NO":
+                    window.alert("Form hasn't been sent as pleased");
+                    break
+                default:
+                    window.alert("Form hasn't been sent. Intention unclear.")
+            }
+        }
+
+        window.onload = setOpinion;
+    </script>
 </head>
 
 <body>
@@ -72,8 +103,7 @@
                     <li>i wiele innych rzeczy</li>
                 </ul>
 
-                <p></p>
-                <form method="post" action="thanks.html" autocomplete="on">
+                <form id="newsletter-form" method="get" action="thanks.html" autocomplete="on">
                     <table>
                         <tr>
                             <td><label for="name">Imię:</label></td>
@@ -101,9 +131,9 @@
                             <td>
                                 <p>Jak podoba Ci się nasza strona?:</p>
                             </td>
-                            <td> <input type="range" id="like" name="weblike" min="0" max="10"> </td>
+                            <td> <input type="range" id="like" name="weblike" min="0" max="4" onchange="setOpinion();"> </td>
                             <td>
-                                <p>Użyj suwaka, im bardziej w prawo tym lepsza jest według Ciebie nasza strona :)</p>
+                                <p id="opinion-level"></p>
                             </td>
                         </tr>
                         <tr>
@@ -142,17 +172,19 @@
                         </tr>
                     </table>
                     <p>
-                        <button type="submit">
-                            <!--<p id="submit-p">Wyślij</p>-->
+                        <button id="submit-button" type="button">
                             Wyślij
                         </button>
                         <button type="reset">
-                            <!--<p id="reset-p">Wyczyść</p>-->
                             Wyczyść
                         </button>
                     </p>
                 </form>
 
+                <script type="text/javascript">
+                    document.getElementById("submit-button").addEventListener("click", onSubmitForm);
+                    newsForm = document.getElementById("newsletter-form");
+                </script>
             </div>
             <div id="mr-right" class="xxx">
 

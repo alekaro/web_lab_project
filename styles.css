@@ -342,15 +342,6 @@ input:enabled {
     border: 1px solid black
 }
 
-
-/* puste p*/
-
-p:empty {
-    width: 100px;
-    height: 20px;
-    background: #ff0000;
-}
-
 @page :first {
     margin-left: 50%;
     margin-top: 50%;
