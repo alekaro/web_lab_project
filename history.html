@@ -10,9 +10,46 @@
 
     <link rel="stylesheet" href="styles.css" type="text/css" />
 
+    <script type="text/javascript">
+        var number = Math.floor(Math.random() * 5) + 1;
+        var timer = 0;
+
+        function setSlide(slideNum) {
+            clearTimeout(timer);
+            number = slideNum - 1;
+            changeSlide();
+        }
+
+        function changeSlide() {
+            number++;
+            if (number > 5) {
+                number = 1;
+            }
+
+            var plik = "<img src=\"img/guitarists/slide" + number + ".jpg\" width=960px height=640px/>";
+
+            document.getElementById("slider").innerHTML = plik;
+
+            timer = setTimeout("changeSlide()", 5000);
+
+            // number++;
+            // var plik = "<img src=\"img/guitarists/slide" + number + ".jpg\" width=960px height=640px/>";
+
+            // document.getElementById("slider").innerHTML = plik;
+
+            // if (number > 5) {
+            //     number = 1;
+            //     clearTimeout(timer);
+            // } else {
+            //     timer = setTimeout("changeSlide()", 5000);
+            // }
+
+        }
+    </script>
+
 </head>
 
-<body>
+<body onload="changeSlide()">
 
     <div id="container">
         <div id="header">
@@ -22,9 +59,9 @@
                         <a href="index.html"><img height="100" width="100" src="./img/logo.png" alt="Powrót do strony głównej" /></a>
                     </td>
                     <td class="d2">
-                        
-                            <h1>Gitary basowe</h1>
-                        
+
+                        <h1>Gitary basowe</h1>
+
                         <td class="d3">
                         </td>
                 </tr>
@@ -61,31 +98,44 @@
                 </ol>
             </div>
             <div id="mr-center" class="xxx">
-<p id="borderimg">Krótka historia gitary</p>
-<div class="newspaper">
-Być może trudno dzisiaj w to uwierzyć, ale początki gitary sięgają czasów starożytnych a pierwsze ślady jej pierwowzorów znaleziono w warstwach archeologicznych datowanych na ponad 4000 lat. Od bardzo dawna znane było samo pojęcie „gitara”. Najbliżej obecnej formie słownikowej było Persom, którzy używali terminu „qitara”, Grekom – „kitra”, natomiast Rzymianie posługiwali się określeniem „cithara”. Obecne brzmienie nazwy tego instrumentu ma swoje źródła w języku hiszpańskim („guitarra”).
+                <p id="borderimg">Krótka historia gitary</p>
+                <div class="newspaper">
+                    Być może trudno dzisiaj w to uwierzyć, ale początki gitary sięgają czasów starożytnych a pierwsze ślady jej pierwowzorów znaleziono w warstwach archeologicznych datowanych na ponad 4000 lat. Od bardzo dawna znane było samo pojęcie „gitara”. Najbliżej
+                    obecnej formie słownikowej było Persom, którzy używali terminu „qitara”, Grekom – „kitra”, natomiast Rzymianie posługiwali się określeniem „cithara”. Obecne brzmienie nazwy tego instrumentu ma swoje źródła w języku hiszpańskim („guitarra”).
+                    Grecy bardzo cenili zarówno lirę, jak i gitarę, które uważali za dary od Boga, Ale tak naprawdę gitara najbliższa obecnej formie zaczęła rozwijać się dopiero w VII i VIII wieku w Europie Zachodniej, konkretnie w Hiszpanii oraz Francji.
+                    W oby tych państwach można było spotkać instrument, który bardzo mocno przypominał grecką kitarę, służący zawodowym muzykom, głównie śpiewakom używającym jej jako instrument akompaniujący. Nie bez znaczenia dla współczesnego kształtu
+                    gitary klasycznej było powstanie w krajach arabskich instrumentu z czterema strunami oraz krótkim gryfem. Krąży wiele historii na temat najstarszego instrumentu, który wyglądałby podobnie jak dzisiejsza gitara akustyczna czy klasyczna.
+                    Mówi się jednak, że dopiero w trakcie późnego średniowiecza lub nawet renesansu powstały instrumenty o wyglądzie zbliżonym do obecnych kształtów gitary. W tamtym okresie gitary klasyczne ciągle jeszcze przegrywały rywalizację z lutniami
+                    posiadającymi więcej strun a także charakteryzującymi się głośniejszym brzmieniem. Dopiero dzięki Ruizowi de Ribayazowi nastąpił złoty wiek gitary. Cóż takiego uczynił ten hiszpański gitarzysta? W XVII wieku postanowił, że spróbuje
+                    zmienić naciąg strun z podwójnego (tzw. lutniowego) na pojedynczy. I udało się! Dźwięk stał się łagodniejszy a mniejsza liczba strun sprawiła, że gitary zaczęły być prostsze w obsłudze a co za tym idzie – bardziej powszechne. Jak już
+                    wspomniałm, lutnia była o wiele głośniejszym instrumentem a gitarę traktowano nieco z przymrużeniem oka, jako instrument kameralny, który nie jest zbyt skomplikowany w obsłudze i z powodzeniem można go używać w zaciszu domowym. Dopiero
+                    w połowie XIX wieku nadał gitarze klasycznej kształt i walory brzmieniowe znane nam dzisiaj gitarzysta i lutnik Antonio de Torres Jurado. Na przełomie XIX i XX wieku powstała gitara akustyczna, z powiększonym pudłem i stalowymi strunami,
+                    instrument o większych możliwościach ekspresji muzycznej i donośniejszym tonie. Kolejnym etapem rozwoju gitary jest gitara elektryczna której powstanie datuje się na lata 30-ste XX wieku.
 
-Grecy bardzo cenili zarówno lirę, jak i gitarę, które uważali za dary od Boga, Ale tak naprawdę gitara najbliższa obecnej formie zaczęła rozwijać się dopiero w VII i VIII wieku w Europie Zachodniej, konkretnie w Hiszpanii oraz Francji. W oby tych państwach można było spotkać instrument, który bardzo mocno przypominał grecką kitarę, służący zawodowym muzykom, głównie śpiewakom używającym jej jako instrument akompaniujący.
-Nie bez znaczenia dla współczesnego kształtu gitary klasycznej było powstanie w krajach arabskich instrumentu z czterema strunami oraz krótkim gryfem. Krąży wiele historii na temat najstarszego instrumentu, który wyglądałby podobnie jak dzisiejsza gitara akustyczna czy klasyczna. Mówi się jednak, że dopiero w trakcie późnego średniowiecza lub nawet renesansu powstały instrumenty o wyglądzie zbliżonym do obecnych kształtów gitary. W tamtym okresie gitary klasyczne ciągle jeszcze przegrywały rywalizację z lutniami posiadającymi więcej strun a także charakteryzującymi się głośniejszym brzmieniem.
-Dopiero dzięki Ruizowi de Ribayazowi nastąpił złoty wiek gitary. Cóż takiego uczynił ten hiszpański gitarzysta? W XVII wieku postanowił, że spróbuje zmienić naciąg strun z podwójnego (tzw. lutniowego) na pojedynczy. I udało się! Dźwięk stał się łagodniejszy a mniejsza liczba strun sprawiła, że gitary zaczęły być prostsze w obsłudze a co za tym idzie – bardziej powszechne.
-Jak już wspomniałm, lutnia była o wiele głośniejszym instrumentem a gitarę traktowano nieco z przymrużeniem oka, jako instrument kameralny, który nie jest zbyt skomplikowany w obsłudze i z powodzeniem można go używać w zaciszu domowym.
-Dopiero w połowie XIX wieku nadał gitarze klasycznej kształt i walory brzmieniowe znane nam dzisiaj gitarzysta i lutnik Antonio de Torres Jurado. Na przełomie XIX i XX wieku powstała gitara akustyczna, z powiększonym pudłem i stalowymi strunami, instrument o większych możliwościach ekspresji muzycznej i donośniejszym tonie. Kolejnym etapem rozwoju gitary jest gitara elektryczna której powstanie datuje się na lata 30-ste XX wieku.
+                </div>
+                <br>
+                <p>Czy wiesz że?</p>
+                <br>
 
-</div>
-<br>
-<p>Czy wiesz że?</p>
-<br> 
+                <div class="flex-container">
+                    <div class="hover flex"><img src="img/guitar.png" height="50" width="50" alt="guitar">Fender, producent słynnych Strato- i Telecasterów (między innymi!), wytwarza również cały zestaw gitarowych akcesoriów, w tym także i struny. Jak dużo? 90 tysięcy strun
+                        każdego dnia.</div>
+                    <div class="hover flex"><img src="img/guitar.png" height="50" width="50" alt="guitar">Fender, producent słynnych Strato- i Telecasterów (między innymi!), wytwarza również cały zestaw gitarowych akcesoriów, w tym także i struny. Jak dużo? 90 tysięcy strun
+                        każdego dnia.</div>
+                    <div class="hover flex"></div>
+                    <div class="hover flex"></div>
+                </div>
 
-<div class="flex-container">
-  <div class="hover flex"><img src = "img/guitar.png" height = "50" width ="50" alt = "guitar">Fender, producent słynnych Strato- i Telecasterów (między innymi!), wytwarza również cały zestaw gitarowych akcesoriów, w tym także i struny. Jak dużo? 90 tysięcy strun każdego dnia.</div>
-  <div class="hover flex"><img src = "img/guitar.png" height = "50" width ="50" alt = "guitar">Fender, producent słynnych Strato- i Telecasterów (między innymi!), wytwarza również cały zestaw gitarowych akcesoriów, w tym także i struny. Jak dużo? 90 tysięcy strun każdego dnia.</div>
-  <div class="hover flex"></div>
-  <div class="hover flex"></div>
-</div> 
-
-</div>
+                Sławni gitarzyści
+                <span onclick="setSlide(1)" style="cursor:pointer;">[ buckethead ]</span>
+                <span onclick="setSlide(2)" style="cursor:pointer;">[ clapton ]</span>
+                <span onclick="setSlide(3)" style="cursor:pointer;">[ flea ]</span>
+                <span onclick="setSlide(4)" style="cursor:pointer;">[ hendrix ]</span>
+                <span onclick="setSlide(5)" style="cursor:pointer;">[ slash ]</span>
+                <div id="slider" style="height: 640px; width: 960px; border: solid 3px orange; border-radius: 10px;"></div>
+            </div>
             <div id="mr-right" class="xxx">
-                
+
             </div>
         </div>
 
@@ -98,7 +148,7 @@ Dopiero w połowie XIX wieku nadał gitarze klasycznej kształt i walory brzmien
                         &copy; Copyright. All right reserved
                         <td rowspan="2" class="d3">
                             <p>Newsletter:</p>
-                                <a href="newsletter.html"><img src="img/newsletter.png" height="30" width="30" alt="Newsletter"/></a>
+                            <a href="newsletter.html"><img src="img/newsletter.png" height="30" width="30" alt="Newsletter" /></a>
                         </td>
                 </tr>
                 <tr>

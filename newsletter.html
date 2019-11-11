@@ -28,14 +28,13 @@
             response = response.toUpperCase();
             switch (response) {
                 case "YES":
-                    window.alert("Form has been sent");
-                    newsForm.submit();
+                    window.alert("Form will be sent if validates");
                     break;
                 case "NO":
-                    window.alert("Form hasn't been sent as pleased");
-                    break
+                    window.alert("Form won't be sent as pleased");
+                    break;
                 default:
-                    window.alert("Form hasn't been sent. Intention unclear.")
+                    window.alert("Form won't be sent. Intention unclear.");
             }
         }
 
@@ -172,7 +171,7 @@
                         </tr>
                     </table>
                     <p>
-                        <button id="submit-button" type="button">
+                        <button id="submit-button" type="submit">
                             Wyślij
                         </button>
                         <button type="reset">

@@ -61,6 +61,8 @@
                         </li>
                     </ol>
                 </nav>
+                </br>
+                <a href="history.html">Krótka historia gitary...</a>
             </div>
 
 
@@ -131,7 +133,6 @@
                         <p id="anchor12">
                             Gitara wielogryfowa <br> Jest to szersza wersja gitary elektrycznej posiadająca więcej niż jeden gryf (najczęściej dwa).
                         </p>
-                        <a href="history.html">Krótka historia gitary...</a>
                     </article>
                 </section>
 
@@ -151,7 +152,7 @@
                                 melodies, and cosmic atmospherics. A band has always dealt in extremes, uncovering light in darkness and finding beauty in heaviness, and with each release, they seek to further expand the sonic palette."</p>
                             <p>cytat z oficjalnej strony <strong>Jackson</strong></p>
                             <p>Jak mówi gitarzysta zespołu Gojira <mark>" I believe, with Jackson we can get through
-									another great adventure once again"</mark></p>
+                                    another great adventure once again"</mark></p>
                             <br>
                             <aside>
                                 <p> Nawiązując do słów artysty, czyżby szykował się kolejny album francuskiego zespołu? Dajcie znać w komentarzach co myślicie! A już niedługo kolejna dawka informacji ze świata muzycznego.
@@ -200,6 +201,28 @@
                             </li>
                         </ol>
                     </nav>
+                    scroll counter:
+                    <span id="scroll-counter">0</span>
+                    <script type="text/javascript">
+                        var counter = 0;
+
+                        window.addEventListener("scroll", countScrolls);
+
+                        function countScrolls() {
+                            document.getElementById("scroll-counter").innerHTML = counter += 1;
+                        }
+                    </script>
+
+                    <pre>
+                    <script>
+                        var hour = new Date().getHours()
+                        if(hour >= 22) {
+                            document.writeln("noc")
+                        } else {
+                            document.writeln("dzień")
+                        }
+                    </script>
+                    </pre>
                 </div>
             </div>
         </div>
