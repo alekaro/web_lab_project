@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="styles.css" type="text/css" />
 		
 		<script>
-		window.onload = function(){
+window.onload = function(){
          // Calculate the product of three integers
          var x, y, z, result;
          var xVal, yVal, zVal;
@@ -18,15 +18,12 @@
          xVal = window.prompt( "Wpisz cenę gitary:" );
          yVal = window.prompt( "Wpisz ile procent zniżki otrzymałeś:" );
 
-         x = parseInt( xVal );
+         x = parseFloat( xVal );
          y = parseInt( yVal );
-		z=100-y;
+         z=100-y;
          result = x * z/100;
-       document.getElementById('output').innerHTML = "Cena twojej gitary wynosi: " + result+" złotych.";
-	   };
-		 
-
-      </script>
+       document.getElementById("output").innerHTML = "Cena twojej gitary wynosi: " + result+" złotych.";};
+</script>
 	  
 	</head>
 	
