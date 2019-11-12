@@ -63,9 +63,9 @@
                 </nav>
                 </br>
                 <a href="history.html">Krótka historia gitary...</a>
-				<br>
-				<br>
-				<a href="kalkulator.html">Kalkulator rabatów - sprawdź ile zapłacisz za gitarę po obniżce cen.</a>
+                <br>
+                <br>
+                <a href="kalkulator.html">Kalkulator rabatów - sprawdź ile zapłacisz za gitarę po obniżce cen.</a>
             </div>
 
 
@@ -206,6 +206,10 @@
                     </nav>
                     scroll counter:
                     <span id="scroll-counter">0</span>
+                    <p id="for-loop"></p>
+                    <p id="while-loop"></p>
+                    <p id="do-while-loop"></p>
+
                     <script type="text/javascript">
                         var counter = 0;
 
@@ -213,6 +217,42 @@
 
                         function countScrolls() {
                             document.getElementById("scroll-counter").innerHTML = counter += 1;
+                        }
+                    </script>
+                    <script>
+                        var counter1 = 0;
+                        var counter2 = 0;
+                        var counter3 = 0;
+
+                        var i;
+
+                        function sleep(milliseconds) {
+                            var start = new Date().getTime();
+                            for (var i = 0; i < 1e7; i++) {
+                                if ((new Date().getTime() - start) > milliseconds) {
+                                    break;
+                                }
+                            }
+                        }
+                        if (counter > 100) {
+                            for (i = 0; i < 10; i++) {
+                                counter1++;
+                                document.getElementById("for-loop").innerHTML = "pętla for: " + counter1;
+                                sleep(1);
+                                while (counter2 < 10) {
+                                    counter2++;
+                                    document.getElementById("while-loop").innerHTML = "pętla while: " + counter2;
+                                    sleep(1);
+                                    do {
+                                        counter3++;
+                                        document.getElementById("do-while-loop").innerHTML = "pętla do-while: " + counter3;
+                                        sleep(1);
+                                    }
+                                    while (counter3 < 10)
+                                    counter3 = 0;
+                                }
+                                counter2 = 0;
+                            }
                         }
                     </script>
 
