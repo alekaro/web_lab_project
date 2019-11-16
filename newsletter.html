@@ -10,36 +10,8 @@
 
     <link rel="stylesheet" href="styles.css" type="text/css" />
 
-    <script type="text/javascript">
-        var opinions = new Array(5);
-        opinions[0] = "W ogóle nie podoba";
-        opinions[1] = "Nie podoba";
-        opinions[2] = "Obojętna";
-        opinions[3] = "Podoba";
-        opinions[4] = "Bardzo podoba";
-
-        function setOpinion() {
-            var lvl = document.getElementById("like").value;
-            document.getElementById("opinion-level").innerHTML = opinions[lvl];
-        }
-
-        function onSubmitForm() {
-            var response = window.prompt("Are you sure? [type \"yes\" if so]", "");
-            response = response.toUpperCase();
-            switch (response) {
-                case "YES":
-                    window.alert("Form will be sent if validates");
-                    break;
-                case "NO":
-                    window.alert("Form won't be sent as pleased");
-                    break;
-                default:
-                    window.alert("Form won't be sent. Intention unclear.");
-            }
-        }
-
-        window.onload = setOpinion;
-    </script>
+    <script src = "focusblur1.js"></script>
+	
 </head>
 
 <body>
@@ -101,7 +73,7 @@
                     <li>dowiesz się z czego są zrobione</li>
                     <li>i wiele innych rzeczy</li>
                 </ul>
-
+				<p id = "helpText"></p>
                 <form id="newsletter-form" method="get" action="thanks.html" autocomplete="on">
                     <table>
                         <tr>
@@ -120,7 +92,7 @@
                         </tr>
                         <tr>
                             <td><label for="start">Miesiąc urodzenia:</label></td>
-                            <td><input type="month" id="start" name="start">
+                            <td><input type="month" id="month" name="start">
                                 <td>
                                     <p>Wybierz z listy swój miesiąc urodzenia</p>
                                 </td>
@@ -148,7 +120,7 @@
                             <td>
                                 <p>Wybierz motyw kolorystyczny swojego newslettera:</p>
                             </td>
-                            <td><input type="color" id="head" name="head" value="#e66465"></td>
+                            <td><input type="color" id="color" name="color" value="#e66465"></td>
                             <td></td>
                         </tr>
 
@@ -171,15 +143,18 @@
                         </tr>
                     </table>
                     <p>
-                        <button id="submit-button" type="submit">
+                        <button id="submit" type="submit">
                             Wyślij
                         </button>
-                        <button type="reset">
+                        <button id = "reset" type="reset">
                             Wyczyść
                         </button>
                     </p>
                 </form>
-
+				
+				<p>Ilość formularzy na tej stronie:</p>
+				<div id = "demo"></div>
+				
                 <script type="text/javascript">
                     document.getElementById("submit-button").addEventListener("click", onSubmitForm);
                     newsForm = document.getElementById("newsletter-form");

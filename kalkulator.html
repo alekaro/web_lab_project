@@ -10,22 +10,7 @@
 
     <link rel="stylesheet" href="styles.css" type="text/css" />
 
-    <script>
-        window.onload = function() {
-            // Calculate the product of three integers
-            var x, y, z, result;
-            var xVal, yVal, zVal;
-
-            xVal = window.prompt("Wpisz cenę gitary:");
-            yVal = window.prompt("Wpisz ile procent zniżki otrzymałeś:");
-
-            x = parseFloat(xVal);
-            y = parseInt(yVal);
-            z = 100 - y;
-            result = x * z / 100;
-            document.getElementById("output").innerHTML = "Cena twojej gitary wynosi: " + result + " złotych.";
-        };
-    </script>
+    <script src = "kalkulator.js"></script>
 
 </head>
 
@@ -79,10 +64,22 @@
 
 
                 <p id="output"></p>
-
-
-
-            </div>
+				<br>
+				<img src="./img/och.png" id="animation" alt="kalkulator">
+				<br>
+				<p>Linki na tej stronie:</p>
+				<div id = "links"></div>
+				<br>
+				<p>Ilość obrazów na tej stronie:</p>
+				<div id = "images"></div>
+				
+            <br>
+			<a name="html" style="color:#FF0000;">Przykładowy anchor!</a><br>
+			<p>Ilość anchorów na tej stronie:</p>
+				<div id = "anchors"></div>
+				
+            
+			</div>
             <div id="mr-right" class="xxx">
 
             </div>

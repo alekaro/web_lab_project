@@ -8,7 +8,16 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		
 		<link rel="stylesheet" href="styles.css" type="text/css" />
-		
+		<style>
+		#canvas { width: 400px;
+          border: 1px solid #999999;
+          border-collapse: collapse }
+.wow td      { width: 8px; height: 8px; margin: 0px; padding: 0px; }
+.blue   { background-color: blue; }
+.red    { background-color: red; }
+.yellow    { background-color: yellow; }
+		</style>
+		<script src = "thanks.js"></script>
 	</head>
 	
 	<body>
@@ -84,7 +93,11 @@
                             <td>Dziękujemy za zaufanie!</td>
                         </tr>
                 </table>
-				
+				<table id = "canvas" class="wow">
+         <caption>Możesz w nagrodę wyżyć się artystycznie! Klikaj i przytrzymaj Ctrl, żeby malować na niebiesko,
+					Shift żeby malować na czerwono albo alt, żeby malować na żółto :) </caption>
+         <tbody id = "tablebody"></tbody>
+      </table>
 				
 	
 				</div>
