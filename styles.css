@@ -169,6 +169,10 @@ h1 {
     opacity: 0;
 }
 
+.highlight {
+    background-color: rgba(217, 255, 0, 0.418);
+}
+
 .center {
     text-align: center;
     text-shadow: 3px 3px hsla(0, 0%, 100%, 0.603);
