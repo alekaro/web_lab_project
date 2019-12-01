@@ -63,7 +63,11 @@ function processCoordinates(e) {
 function keyPressed(e) {
     if (e.keyCode === 17) {
         document.getElementById("mousecoords").innerHTML = "client coords: " + xcordmouse + ", " + ycordmouse;
-        document.getElementById("coords").innerHTML = "screen coords: " + xcordmouse + ", " + ycordmouse;
+        document.getElementById("coords").innerHTML = "screen coords: " + xcord + ", " + ycord;
+    }
+    if (e.keyCode === 32) {
+        document.getElementById("mousecoords").innerHTML = "";
+        document.getElementById("coords").innerHTML = "";
     }
 }
 window.addEventListener("load", createCanvas, false);

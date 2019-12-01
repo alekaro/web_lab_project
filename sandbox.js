@@ -1,28 +1,6 @@
 var currentNode;
 var idcount = 0;
 
-function start() {
-    document.getElementById("selectButton").addEventListener(
-        "click", select, false);
-    document.getElementById("insertButton").addEventListener(
-        "click", insert, false);
-    document.getElementById("appendButton").addEventListener(
-        "click", appendNode, false);
-    document.getElementById("replaceButton").addEventListener(
-        "click", replaceCurrent, false);
-    document.getElementById("removeButton").addEventListener(
-        "click", remove, false);
-    document.getElementById("backgroundColorButton").addEventListener(
-        "click", changeBackgroundColor, false);
-    document.getElementById("textColorButton").addEventListener(
-        "click", changeTextColor, false);
-    document.getElementById("fontlist").addEventListener(
-        "change", changeFont, false);
-    currentNode = document.getElementById("index1");
-}
-
-window.addEventListener("load", start, false);
-
 function highlight(node) {
     currentNode.setAttribute("class", "");
     currentNode = node;
@@ -42,14 +20,13 @@ function insert() {
     var text = document.getElementById("ins").value;
     var newNode = document.createTextNode("[new" + idcount + "]" + text);
     currentNode.parentNode.insertBefore(newNode, currentNode);
-    newNode.setAttribute("id", "new" + idcount++);
 }
 
 function appendNode() {
     var text = document.getElementById("append").value;
-    var textNode = document.createTextNode("[new" + idcount + "]" + text);
-    currentNode.appendChild(textNode);
-    newNode.setAttribute("id", "new" + idcount++);
+    var newNode = createNode("[new" + idcount + "]" + text);
+    currentNode.appendChild(newNode);
+    highlight(newNode);
 }
 
 function replaceCurrent() {
@@ -87,3 +64,25 @@ function createNode(text) {
     newNode.appendChild(document.createTextNode(text));
     return newNode;
 }
+
+function start() {
+    document.getElementById("selectButton").addEventListener(
+        "click", select, false);
+    document.getElementById("insertButton").addEventListener(
+        "click", insert, false);
+    document.getElementById("appendButton").addEventListener(
+        "click", appendNode, false);
+    document.getElementById("replaceButton").addEventListener(
+        "click", replaceCurrent, false);
+    document.getElementById("removeButton").addEventListener(
+        "click", remove, false);
+    document.getElementById("backgroundColorButton").addEventListener(
+        "click", changeBackgroundColor, false);
+    document.getElementById("textColorButton").addEventListener(
+        "click", changeTextColor, false);
+    document.getElementById("fontlist").addEventListener(
+        "change", changeFont, false);
+    currentNode = document.getElementById("index1");
+}
+
+window.addEventListener("load", start, false);
