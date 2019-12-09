@@ -62,7 +62,7 @@
             </div>
             <div id="mr-center-form" class="xxx">
                 <p>Wypełnij formularz, a odezwiemy się do Ciebie.</p>
-                <form method="post" action="http://www.deitel.com" autocomplete="on">
+                <form method="post" action="form.php" autocomplete="on">
 
                     <p><label>Imię:
                             <input name="firstname" type="text" size="33" autofocus>
@@ -77,7 +77,7 @@
                         </label></p>
 
                     <p><label>Telefon:
-                            <input type="tel" name="phone" size="33" pattern="[0-9]{3} [0-9]{3} [0-9]{3}">
+                            <input type="tel" name="phone" size="33">
                         </label></p>
 
                     <p><label>Miasto:
@@ -85,7 +85,7 @@
                         </label></p>
 
                     <p><label>Miesiąc urodzin:
-                            <input list="game">
+                            <input list="game" name="bmonth">
                             <datalist id="game">
                                 <option value="styczeń"></option>
                                 <option value="luty">
@@ -100,7 +100,16 @@
                                 <option value="listopad">
                                 <option value="grudzień">
                             </datalist>
-                        </label></p>
+                        </label>
+                    </p>
+                    <p>
+                        <strong>Czytać miesiąc liczbowo?</strong><br>
+
+                        <label>tak
+                            <input name="bmnumber" type="radio" value="yes" checked></label>
+                        <label>nie
+                            <input name="bmnumber" type="radio" value="no"></label>
+                    </p>
 
                     <p>
                         <label>Województwo:
@@ -162,10 +171,10 @@
                     </p>
 
                     <p>
-                        <button type="submit">
-                            <!--<p id="submit-p">Wyślij</p>-->
-                            Wyślij
-                        </button>
+                        <input type="submit" name="submit">
+                        <!--<p id="submit-p">Wyślij</p>-->
+                        Wyślij
+                        </input>
                         <button type="reset">
                             <!--<p id="reset-p">Wyczyść</p>-->
                             Wyczyść
@@ -182,6 +191,7 @@
             <table class="t1">
                 <tr>
                     <td class="d1">
+                        <a href="liczbowy-formularz.html">formularz obliczeniowy</a>
                     </td>
                     <td class="d2">
                         &copy; Copyright. All right reserved
