@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+$prev = "liczbowy-formularz.php";
+
+if (!isset($_SESSION['login'])) {
+    header("location: login.php?previous=$prev");
+}
+?>
+
 <!DOCTYPE HTML>
 <html lang="pl">
 
@@ -25,8 +35,11 @@
 
                         <h1>Skontaktuj się z nami!</h1>
 
-                        <td class="d3">
-                        </td>
+                    <td class="d3">
+                        <?php
+                        echo '<p style="color: white;font-size: 40px;">' . $_SESSION['login'] . '</p>';
+                        ?>
+                    </td>
                 </tr>
             </table>
         </div>
@@ -88,6 +101,23 @@
             </div>
             <div id="mr-right" class="xxx">
 
+                <form method="POST" action=''>
+                    <input type="submit" name="reset-session">
+                </form>
+                <?php
+                if (isset($_POST['reset-session'])) {
+                    session_unset();
+
+                    session_destroy();
+
+                    header("Refresh:0");
+                }
+                ?>
+
+                <?php
+                echo '<p>Id sesji: '.$_COOKIE["sessionIdC"].'</p>';
+                ?>
+
             </div>
         </div>
         <footer>
@@ -97,10 +127,10 @@
                     </td>
                     <td class="d2">
                         &copy; Copyright. All right reserved
-                        <td rowspan="2" class="d3">
-                            <p>Newsletter:</p>
-                            <a href="newsletter.html"><img src="img/newsletter.png" height="30" width="30" alt="Newsletter" /></a>
-                        </td>
+                    <td rowspan="2" class="d3">
+                        <p>Newsletter:</p>
+                        <a href="newsletter.html"><img src="img/newsletter.png" height="30" width="30" alt="Newsletter" /></a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="d1">
