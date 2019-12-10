@@ -81,7 +81,7 @@
 <p><b>Zmień motyw kolorystyczny strony!:</b></p>			
 <?php
 // SWITCHER LINK
-while(list($key, $val) = each($styleSheets)){
+while(list($key, $val) = each($listaStylow)){
 
 echo "<a href='styleswitcher.php?SETSTYLE=".$key."'>".$val["text"]."<br /></a>";
 }

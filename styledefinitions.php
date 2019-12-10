@@ -1,21 +1,24 @@
 <?php
-$styleSheets = array();
+$listaStylow = array();
 
 // lista stylów
-$styleSheets[0]["text"]='Domyślny';
-$styleSheets[0]["sheet"]='<link href="styles.css" rel="stylesheet" type="text/css" />';
+$listaStylow[0]["text"]='Domyślny';
+$listaStylow[0]["sheet"]='<link href="styles.css" rel="stylesheet" type="text/css" />';
 
-$styleSheets[1]["text"]='Czarno-Biały';
-$styleSheets[1]["sheet"]='<link href="styles22.css" rel="stylesheet" type="text/css" />';
+$listaStylow[1]["text"]='Czarno-Biały';
+$listaStylow[1]["sheet"]='<link href="styles22.css" rel="stylesheet" type="text/css" />';
 
 // styl domyślny
 $defaultStyleSheet=0;
 
 // ustaw styl
 if(!isset($_COOKIE["STYLE"])){
-echo $styleSheets[$defaultStyleSheet]["sheet"];
+echo $listaStylow[$defaultStyleSheet]["sheet"];
 }
  else {
-echo $styleSheets[$_COOKIE["STYLE"]]["sheet"];
+echo $listaStylow[$_COOKIE["STYLE"]]["sheet"];
 }
+
+echo $_COOKIE["STYLE"];
+print_r($_COOKIE);
 ?>
