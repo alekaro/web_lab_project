@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+$prev = "sandbox.php";
+
+if (!isset($_SESSION['login'])) {
+    header("location: login.php?previous=$prev");
+}
+?>
+
 <!DOCTYPE HTML>
 <html lang="pl">
 
@@ -21,15 +31,17 @@
             <table class="t1">
                 <tr>
                     <td class="d1">
-                        <a href="index.html">class = [logo]<img class="logo" height="100" width="100"
-                                src="./img/logo.png" alt="Powrót do strony głównej" /></a>
+                        <a href="index.html">class = [logo]<img class="logo" height="100" width="100" src="./img/logo.png" alt="Powrót do strony głównej" /></a>
                     </td>
                     <td class="d2">
 
                         <h1 id="main-header" class="center">[main-header] SANDBOX STRONY GŁÓWNEJ</h1>
 
-                        <td class="d3">
-                        </td>
+                    <td class="d3">
+                    <?php
+                            echo '<p style="color: white;font-size: 40px;">'.$_SESSION['login'].'</p>';
+                        ?>
+                    </td>
                 </tr>
             </table>
         </div>
@@ -199,12 +211,26 @@
                         <p><input type="text" id="color" placeholder="ang. nazwa koloru"><input type="button" value="zmień tło" id="backgroundColorButton"></p>
                         <p><input type="text" id="textColor" placeholder="ang. nazwa koloru"><input type="button" value="zmień tekst" id="textColorButton"></p>
                         <select id="fontlist">
-                                <option value="Times New Roman">Times new roman</option>
-                                <option value="Arial">Arial</option>
-                                <option value="Andale">Andale</option>
-                                <option value="Courier">Courier</option>
-                            </select>
+                            <option value="Times New Roman">Times new roman</option>
+                            <option value="Arial">Arial</option>
+                            <option value="Andale">Andale</option>
+                            <option value="Courier">Courier</option>
+                        </select>
                     </form>
+
+                    <form method="POST" action=''>
+                        <input type="submit" name="reset-session">
+                    </form>
+                    <?php
+                    if (isset($_POST['reset-session'])) {
+                        session_unset();
+
+                        session_destroy();
+
+                        header("Refresh:0");
+                    }
+                    ?>
+
                 </div>
             </div>
         </div>
@@ -215,10 +241,10 @@
                     </td>
                     <td class="d2">
                         &copy; Copyright. All right reserved
-                        <td rowspan="2" class="d3">
-                            <p>Newsletter:</p>
-                            <a href="newsletter.html"><img src="img/newsletter.png" height="30" width="30" alt="Newsletter" /></a>
-                        </td>
+                    <td rowspan="2" class="d3">
+                        <p>Newsletter:</p>
+                        <a href="newsletter.html"><img src="img/newsletter.png" height="30" width="30" alt="Newsletter" /></a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="d1">
