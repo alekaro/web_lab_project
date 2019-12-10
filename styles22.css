@@ -1,0 +1,508 @@
+@font-face {
+    src: url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+    font-family: 'Roboto';
+}
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 100%;
+}
+
+#header {
+    background-color: black;
+    color: white;
+    padding: 15px;
+}
+
+#main-row {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+#mr-left {
+    background: linear-gradient(to right, black, white);
+    color: white;
+    width: 14.5%;
+    padding-left: 0.5%;
+}
+
+#img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#mr-center {
+    background-image: url("img/pick.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    padding: 1%;
+    width: 68%;
+}
+
+#borderimg {
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image-source: url(img/border.png);
+    border-image-slice: 30;
+    border-image-repeat: round;
+}
+
+#mr-center-form {
+    background: url("img/background-kerry.jpg") no-repeat center center;
+    border: 0px solid transparent;
+    border-image-source: url("img/border.png");
+    border-image-slice: 30%;
+    background-origin: border-box;
+    background-size: cover;
+    color: white;
+    padding: 2%;
+    width: 66%;
+}
+
+#mr-right {
+    background: radial-gradient(hsl(0, 0%, 40%), hsl(0, 0%, 61%));
+    color: white;
+    width: 14.5%;
+    padding-left: 0.5%;
+}
+
+#st {
+    position: fixed;
+}
+
+#newsletter {
+    vertical-align: middle;
+    position: static;
+}
+
+#thanks {
+    font-size: 6em;
+    /* x * standard font size */
+}
+
+#index0 {
+    font-size: 170%;
+    /* x/100 * standard font size */
+}
+
+#index1 {
+    font-style: italic;
+    /* normal, italic, oblique, initial */
+    font-weight: 700;
+    /* "boldness of the font" */
+    font-variant: small-caps;
+    /* normal, inherit, initial */
+    font-size: 50px;
+    /* pixels */
+}
+
+#index2 {
+    font-size: 30pt;
+    line-height: 90%;
+    /* points (used mostly for printing as 72 points are always equal to 2.54 cm) */
+}
+
+footer {
+    background-color: darkgrey;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    /* font-size: 120%; */
+}
+
+.logo:hover {
+    animation: spin 0.5s ease-in-out 1;
+}
+
+@keyframes spin {
+    0% {
+        transform: translateY(-15px);
+    }
+    25% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: rotate(0deg) skew(-20deg)
+    }
+    100% {
+        transform: rotate(360deg) skew(0deg)
+    }
+}
+
+#imgurs {
+    position: relative;
+    display: block;
+    height: 370px;
+}
+
+#imgurs img {
+    position: absolute;
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+    transition: all 2s ease-in-out;
+}
+
+#imgurs img.imgur1 {
+    opacity: 0;
+}
+
+#imgurs:hover img.imgur1 {
+    opacity: 1;
+}
+
+#imgurs:hover img.imgur2 {
+    opacity: 0;
+}
+
+.highlight {
+    background-color: rgba(0, 217, 255, 0.219);
+}
+
+.center {
+    text-align: center;
+    text-shadow: 3px 3px hsla(0, 0%, 100%, 0.603);
+}
+
+.xxx {
+    height: auto;
+    position: relative;
+}
+
+.t1 {
+    width: 100%
+}
+
+.d1 {
+    text-align: left;
+    width: 15%;
+}
+
+.d2 {
+    text-align: center;
+}
+
+.d3 {
+    text-align: right;
+    width: 15%;
+}
+
+.ei-tab {
+    border-style: groove;
+    border-color: white;
+    border-width: 5px;
+    background: white;
+}
+
+.ei-tab>tbody>tr>td {
+    border-style: groove;
+    border-color: white;
+    border-width: 2px;
+}
+
+.bm-tab td {
+    border-style: groove;
+    border-color: white;
+    border-width: 3px;
+    background: white;
+}
+
+.bm-tab {
+    border-style: double;
+    border-width: 6px;
+    background: #fff9ed;
+}
+
+.big-header {
+    background-color: white;
+    width: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #ede2ff;
+}
+
+li {
+    transition: all 0.2s linear;
+}
+
+li:hover {
+    transform: scale(1.1);
+}
+
+article {
+    background: #a5a5a557;
+    border: 2px solid rgba(70, 70, 70, 0.795);
+    border-radius: 20px;
+    padding: 5px;
+    -webkit-box-shadow: 10px 10px 7px -1px rgba(79, 79, 79, 0.4);
+    -moz-box-shadow: 10px 10px 7px -1px rgba(79, 79, 79, 0.4);
+    box-shadow: 10px 10px 7px -1px rgba(79, 79, 79, 0.4);
+}
+
+#facebook {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 200px;
+    height: 100px;
+    border: 3px solid blue;
+}
+
+#main-section {
+    display: block;
+    float: left;
+    width: 59%;
+    margin-right: 1%;
+}
+
+#news-section {
+    display: block;
+    float: left;
+    width: 39%;
+    margin-left: 1%;
+}
+
+#ending {
+    clear: both;
+}
+
+
+/*media*/
+
+@media only screen and (max-width: 1200px) {
+    #mr-left {
+        display: none;
+    }
+    #mr-right {
+        display: none;
+    }
+}
+
+@media print {
+    #mr-left {
+        display: none;
+    }
+    #mr-right {
+        display: none;
+    }
+}
+
+
+/*po atrybutach*/
+
+button[type="submit"] {
+    border: 4px solid red
+}
+
+button[type="reset"] {
+    border: 4px solid green
+}
+
+
+/* Link po przytrztmaniu kursora*/
+
+a:active {
+    color: white
+}
+
+
+/*Label po zaznaczeniu checkboxa*/
+
+input[type=checkbox]:checked+label {
+    color: grey;
+    font-style: normal;
+}
+
+
+/*pola, w które nie można nic wpisać*/
+
+input:disabled {
+    border-style: dashed;
+    border-width: 2px;
+    border-color: red;
+}
+
+
+/*pola, w które można coś wpisać*/
+
+input:enabled {
+    border: 1px solid black
+}
+
+@page :first {
+    margin-left: 50%;
+    margin-top: 50%;
+    /*margin: 5cm;*/
+}
+
+.newstab tbody tr:first-child td {
+    color: red
+}
+
+
+/*okienko, w które coś wpisujesz w formularzu*/
+
+input:focus {
+    background: #cecece;
+}
+
+
+/* Link po najechaniu kursorem*/
+
+.newstab tbody tr:last-child td {
+    color: green
+}
+
+.listanews li:last-of-type {
+    font-style: italic;
+}
+
+
+/* Nieodwiedzony link */
+
+a:link {
+    color: #000000
+}
+
+.zebra tbody tr:nth-child(2) {
+    font-style: italic
+}
+
+.zebra tbody tr:nth-last-child(odd) td {
+    color: white;
+    background-color: gray
+}
+
+.zebra tbody tr:not(:nth-last-child(odd)) td {
+    color: gray;
+    background-color: white
+}
+
+.newstab1 tbody tr:only-child td {
+    color: purple
+}
+
+@media only screen and (max-width: 599px) {
+    .newspaper {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .newspaper {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        -webkit-column-gap: 40px;
+        -moz-column-gap: 40px;
+        column-gap: 40px;
+        -webkit-column-rule: 7px dashed purple;
+        -moz-column-rule: 7px dashed purple;
+        column-rule: 7px dashed purple;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .newspaper {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+        -webkit-column-gap: 40px;
+        -moz-column-gap: 40px;
+        column-gap: 40px;
+        -webkit-column-rule: 4px double black;
+        -moz-column-rule: 4px double black;
+        column-rule: 4px double black;
+    }
+}
+
+
+/* Pola wymagane */
+
+input:required {
+    background: #ffe0e0;
+}
+
+
+/* Odwiedzony link */
+
+a:visited {
+    color: #555555
+}
+
+
+/*Koloruje tekst, do którego się przemieściliśmy dzięki etykietom*/
+
+p:target {
+    color: purple
+}
+
+.listanews li:nth-of-type(odd) {
+    color: purple
+}
+
+a [href="newsletter.html"] {
+    background-color: white;
+}
+
+p [id="submit-p"],
+p [id="reset-p"] {
+    font-variant: small-caps;
+    font-size: 13pt;
+    font-weight: 700;
+    display: inline;
+}
+
+p:lang(en) {
+    color: purple
+}
+
+.flex-container {
+    width: 100%;
+    height: 300px;
+    /* create the flex container */
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.flex {
+    -webkit-transition: 1s ease-out;
+    transition: 1s ease-out;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 120px;
+    margin: 10px -10px 10px 0px;
+    padding: 20px 20px 20px 20px;
+    font-size: 12px;
+    flex: 1;
+    background-color: orange;
+}
+
+.hover:hover {
+    flex: 4;
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+}
