@@ -1,13 +1,12 @@
 <?php
-// SET COOKIE FOR 1 YEAR
+// ustawiamy ciastko na jeden miesiąc
 if(isset($_REQUEST["SETSTYLE"])){
 if(setcookie("testcookie",true)){
-setcookie("STYLE",$_REQUEST["SETSTYLE"],time()+31622400,"/");
-} else {
-$_SESSION["STYLE"]=$_REQUEST["SETSTYLE"];
+setcookie("STYLE",$_REQUEST["SETSTYLE"],time()+60 * 60 * 24 * 30,"/");
 }
 }
 
-// RETURN TO CURRENT PAGE
+// powrót do obecnej strony
 header("Location: ".$_SERVER["HTTP_REFERER"]);
+
 ?>
