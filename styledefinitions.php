@@ -20,5 +20,5 @@ echo $listaStylow[$_COOKIE["STYLE"]]["sheet"];
 }
 
 echo $_COOKIE["STYLE"];
-print_r($_COOKIE);
+#print_r($_COOKIE);
 ?>
