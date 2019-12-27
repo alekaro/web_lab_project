@@ -18,14 +18,25 @@
             $username=$_POST['user-login'];
             $password=$_POST['user-passwd'];
 
-            $username = stripslashes($username);
-            $password = stripslashes($password);
-            if (array_key_exists($username, $user_table) && $user_table[$username] == $password) {
+            $query = "SELECT * FROM users " .
+                        "WHERE login = \"$username\" AND haslo = \"$password\"";
+
+            // Connect to MySQL
+            if (!($database = mysqli_connect("localhost", "root", "", "userList"))) {
+                die("<p>Could not connect to database</p>");
+            }
+
+            // execute query in database
+            if (!($result = mysqli_query($database, $query))) {
+                print("<p>Could not execute query!</p>");
+                die(mysqli_error($database));
+            }
+
+            if (mysqli_fetch_row($result)!=NULL) {
                 $_SESSION['login']=$username;
                 header('Location: '. $prev);
             } else {
-                $error = "Login lub hasło nieprawidłowe.";
+                $error = "Login i/lub hasło nieprawidłowe.";
             }
         }   
     }
-?>

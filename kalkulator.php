@@ -10,7 +10,7 @@
 
 
 <?php include('styledefinitions.php'); ?>
- 
+ <script src = "kalkulator.js"></script>
 
 </head>
 

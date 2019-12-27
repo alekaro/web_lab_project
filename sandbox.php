@@ -38,8 +38,8 @@ if (!isset($_SESSION['login'])) {
                         <h1 id="main-header" class="center">[main-header] SANDBOX STRONY GŁÓWNEJ</h1>
 
                     <td class="d3">
-                    <?php
-                            echo '<p style="color: white;font-size: 40px;">'.$_SESSION['login'].'</p>';
+                        <?php
+                        echo '<p style="color: white;font-size: 40px;">' . $_SESSION['login'] . '</p>';
                         ?>
                     </td>
                 </tr>
