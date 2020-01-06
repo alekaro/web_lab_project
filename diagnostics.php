@@ -26,14 +26,7 @@ session_start();
                         <a href="index.html"><img class="logo" height="100" width="100" src="./img/logo.png" alt="Powrót do strony głównej" /></a>
                     </td>
                     <td class="d2">
-                        <?php
-
-                        if (!isset($_SESSION['login'])) {
-                            echo '<h1 class="center">Rejestracja</h1>';
-                        } else {
-                            echo '<h1 class="center">Edycja danych</h1>';
-                        }
-                        ?>
+                        <h1 class="center">Skrypt diagnostyczny</h1>
                     <td class="d3">
                     </td>
                 </tr>
@@ -75,72 +68,27 @@ session_start();
 
             <div id="mr-center" class="xxx">
                 <?php
-                $zalogowany = False;
-
-                $iserror = False;
                 $bdateerror = False;
                 $error = "";
 
-                if (isset($_SESSION["login"])) {
-                    $zalogowany = True;
-                    $login = $_SESSION["login"];
-
-                    $query = "SELECT * FROM users " .
-                        "WHERE login = \"$login\"";
-
-                    if (!($database = mysqli_connect("localhost", "root", "", "userList"))) {
-                        die("<p>Could not connect to database</p>");
-                    }
-
-                    if (!($result = mysqli_query($database, $query))) {
-                        print("<p>Could not execute query!</p>");
-                        die(mysqli_error($database));
-                    }
-
-                    if (($row = mysqli_fetch_row($result)) != NULL) {
-                        $email = $row[2];
-                        $bdate = $row[3];
-                        $haslo = $row[4];
-                    } else {
-                        $error = "Z jakiegoś powodu nie udało się pobrać wartości.";
-                    }
-
-                    mysqli_close($database);
-                }
                 if (isset($_POST["submit"])) {
 
-                    $login = isset($_POST["login"]) ? $_POST["login"] : "";
-                    $email = isset($_POST["email"]) ? $_POST["email"] : "";
-                    $bdate = isset($_POST["bdate"]) ? $_POST["bdate"] : "";
-                    $haslo = isset($_POST["haslo"]) ? $_POST["haslo"] : "";
-
-                    if (!preg_match("/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/", $bdate)) {
-                        $bdateerror = True;
-                        $iserror = true;
-                    } // end if
-
-                    if ($login == "") $iserror = True;
-
-                    if ($email == "") $iserror = True;
-
-                    if ($haslo == "") $iserror = True;
-
-                    if (isset($_SESSION["login"])) {
-                        $query = "UPDATE users " .
-                            "SET login = \"" . $login . "\", " .
-                            "email = \"" . $email . "\", " .
-                            "bdate = \"" . $bdate . "\", " .
-                            "haslo = \"" . $haslo . "\" " .
-                            "WHERE login = \"" . $_SESSION["login"] . "\"";
-                    } else {
-                        $query = "INSERT INTO users " .
-                            "( login, email, bdate, haslo ) " .
-                            "VALUES ( '$login', '$email', '$bdate', '$haslo')";
+                    foreach ($_POST as $key => $value) {
+                        $$key = $value;
                     }
 
-                    if ($iserror) {
-                        if ($bdateerror) $error = '<p style="color: red;">Data urodzenia musi być w formacie 0000-00-00 </p>';
-                        else $error = '<p style="color: red;">Wszystkie pola muszą być wypełnione!</p>';
+                    if (!preg_match("/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/", $bdate) && $bdate != "") {
+                        $bdateerror = True;
+                    } // end if
+
+                    $query = "SELECT * FROM  users WHERE TRUE";
+
+                    foreach ($_POST as $key => $value) {
+                        if ($$key != "" && $value != "Wyszukaj") $query = $query . " AND $key LIKE \"%" . $value . "%\"";
+                    }
+
+                    if ($bdateerror) {
+                        $error = '<p style="color: red;">Data urodzenia musi być w formacie 0000-00-00 </p>';
                     } else {
                         // Connect to MySQL
                         if (!($database = mysqli_connect("localhost", "root", "", "userList"))) {
@@ -155,8 +103,7 @@ session_start();
 
                         mysqli_close($database);
 
-                        $error = '<p style="color: green;"> Rejestracja przebiegła pomyślnie. </p>';
-                        $_SESSION["login"] = $login;
+                        $error = '<p style="color: green;"> Wyszukiwanie powiodło się. </p>';
                     }
                 }
                 ?>
@@ -167,9 +114,7 @@ session_start();
                                 <label>Login</label>
                             </td>
                             <td>
-                                <?php
-                                echo '<input name="login" type="text" size="33"' . ($zalogowany ? 'value="' . $login . '"' : '') . '  autofocus>';
-                                ?>
+                                <input name="login" type="text" size="33" autofocus>
                             </td>
                         </tr>
                         <tr>
@@ -177,9 +122,7 @@ session_start();
                                 <label>Email</label>
                             </td>
                             <td>
-                                <?php
-                                echo '<input name="email" type="text" size="33"' . ($zalogowany ? 'value="' . $email . '"' : '') . '>';
-                                ?>
+                                <input name="email" type="text" size="33">
                             </td>
                         </tr>
                         <tr>
@@ -187,9 +130,7 @@ session_start();
                                 <label>Data urodzenia</label>
                             </td>
                             <td>
-                                <?php
-                                echo '<input name="bdate" type="text" size="33"' . ($zalogowany ? 'value="' . $bdate . '"' : '') . '>';
-                                ?>
+                                <input name="bdate" type="text" size="33">
                             </td>
                         </tr>
                         <tr>
@@ -197,24 +138,56 @@ session_start();
                                 <label>Hasło</label>
                             </td>
                             <td>
-                                <?php
-                                echo '<input name="haslo" type="text" size="33"' . ($zalogowany ? 'value="' . $haslo . '"' : '') . '>';
-                                ?>
+                                <input name="haslo" type="text" size="33">
                             </td>
                         </tr>
                     </table>
 
                     <p>
-                        <input type="submit" name="submit" value="Zarejestruj">
+                        <input type="submit" name="submit" value="Wyszukaj">
                         </input>
                     </p>
                     <span><?php echo $error; ?></span>
+
+                    <table class="ei-tab">
+                        <tr>
+                            <td>
+                                <p style="font-weight: bold;">id</p>
+                            </td>
+                            <td>
+                                <p style="font-weight: bold;">login</p>
+                            </td>
+                            <td>
+                                <p style="font-weight: bold;">email</p>
+                            </td>
+                            <td>
+                                <p style="font-weight: bold;">dataUr</p>
+                            </td>
+                            <td>
+                                <p style="font-weight: bold;">haslo</p>
+                            </td>
+                            <td>
+                                <p style="font-weight: bold;">dataUtw</p>
+                            </td>
+                        </tr>
+                        <?php
+                        if (isset($_POST["submit"])) {
+                            while ($row = mysqli_fetch_row($result)) {
+                                echo "<tr>";
+                                foreach ($row as $key => $value) {
+                                    echo "<td>$value</td>";
+                                }
+                                echo "</tr>";
+                            }
+                        }
+                        ?>
+                    </table>
                 </form>
             </div>
 
 
             <div id="mr-right" class="xxx">
-                <a href="diagnostics.php"> Strona diagnostyczna</a>
+
             </div>
         </div>
         <footer>

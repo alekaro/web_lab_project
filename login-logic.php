@@ -32,11 +32,13 @@
                 die(mysqli_error($database));
             }
 
-            if (mysqli_fetch_row($result)!=NULL) {
+            if (($row = mysqli_fetch_row($result))!=NULL) {
                 $_SESSION['login']=$username;
                 header('Location: '. $prev);
             } else {
                 $error = "Login i/lub hasło nieprawidłowe.";
             }
+
+            mysqli_close($database);
         }   
     }
